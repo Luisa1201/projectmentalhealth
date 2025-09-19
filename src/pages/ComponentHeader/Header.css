@@ -1,66 +1,61 @@
-/* ===== HEADER NAVBAR ===== */
-.custom-header {
-  background: linear-gradient(135deg, #00b3b3, #009999);
-  box-shadow: 0 6px 20px rgba(0, 128, 128, 0.25);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  position: sticky;
+:root {
+  --text-light: #ffffff;
+  --shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
+}
+
+.navbar {
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #00b3b3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  color: var(--text-light);
+  font-family: "Poppins", "Arial", sans-serif;
   z-index: 1000;
+  box-shadow: var(--shadow);
 }
 
 /* Logo */
-.custom-header .navbar-brand {
-  font-size: 26px;
-  color: #fff !important;
+.navbar-logo {
+  font-size: 22px;
+  font-weight: 600;
   letter-spacing: 1px;
-  transition: transform 0.3s ease;
+  color: var(--text-light);
+  transition: var(--transition);
 }
 
-.custom-header .navbar-brand:hover {
-  transform: scale(1.05);
+.navbar-logo:hover {
+  color: #0e5a5a ;
 }
 
 /* Links */
-.custom-header .nav-link {
-  color: #f0f0f0 !important;
-  font-size: 17px;
-  font-weight: 500;
-  margin-left: 18px;
-  transition: color 0.3s ease;
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
-.custom-header .nav-link:hover {
-  color: #ffe;
-  text-decoration: underline;
+.navbar-links li {
+  display: inline;
 }
 
-/* Botón login */
-.login-btn {
-  background: #ffffff;
-  color: #009999 !important;
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-light);
   font-size: 16px;
-  font-weight: bold;
-  padding: 10px 18px;
-  border-radius: 12px;
-  border: none;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  transition: var(--transition);
 }
 
-.login-btn:hover {
-  background: #e0fafa;
-  color: #007777 !important;
-  transform: translateY(-2px);
-}
-
-.login-btn:active {
-  transform: scale(0.97);
-}
-
-/* Toggle responsive */
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler-icon {
-  filter: invert(1); /* blanco */
+.navbar-links a:hover {
+  color: rgb(59, 86, 88);
+  text-decoration: underline;
 }
