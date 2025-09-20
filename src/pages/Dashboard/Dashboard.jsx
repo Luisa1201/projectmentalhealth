@@ -65,8 +65,9 @@ const Dashboard = ({onLogout}) => {
         <div className="grafico-circular">
         </div>
       </div>
-      
-       <Footer className="footer"/>
+      <div>
+        <Footer className="footer"/>
+      </div>
     </div>
   );
 };

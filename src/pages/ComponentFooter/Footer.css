@@ -5,7 +5,8 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0 -5px 25px rgba(0, 128, 128, 0.15);
   animation: fadeIn 0.8s ease-in-out;
-  
+  /* Asegura que el footer ocupe el ancho completo del viewport */
+  width: 100%;
 }
 
 .footer-container {
@@ -13,8 +14,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  max-width: 1200px;
-  margin: auto;
+  /* Elimina el max-width para que se extienda */
+  padding: 0 50px; /* Agrega padding lateral para que el contenido no toque los bordes */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
 }
 
 .footer-about {
@@ -95,8 +97,13 @@
 .footer-bottom {
   margin-top: 30px;
   text-align: center;
-  border-top: 1px solid #a0dcdc;
   padding-top: 15px;
   font-size: 14px;
   color: #444;
+}
+
+.footer-bottom hr {
+  border: none;
+  border-top: 1px solid #a0dcdc;
+  margin-bottom: 15px;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import "./Footer.css";
 
 const Footer = () => {
@@ -39,6 +39,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
+        <hr />
         <p>&copy; {new Date().getFullYear()} Project Mental Health. Todos los derechos reservados.</p>
       </div>
     </footer>
