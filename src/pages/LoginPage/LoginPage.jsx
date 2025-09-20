@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGoogle, FaGithub, FaFacebook } from "react-icons/fa";
 import "./LoginPage.css";
 
-function LoginPage({ onRegisterClick, onForgotClick }) {
+function LoginPage({ onRegisterClick, onForgotClick, onLoginSuccess }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    //  Validación básica de usuario demo
+    if (email === "luda@gmail.com" && password === "1234") {
+      onLoginSuccess(); // pasa al dashboard
+    } else {
+      alert("Correo o contraseña incorrectos");
+    }
+  };
+
   return (
+    <div className="login-body">
     <div className="login-container">
       <div className="login-header">
         <img 
@@ -14,9 +29,21 @@ function LoginPage({ onRegisterClick, onForgotClick }) {
         <h2>¡Bienvenido!</h2>
       </div>
 
-      <form className="login-form">
-        <input type="email" placeholder="Correo electrónico" required />
-        <input type="password" placeholder="Contraseña" required />
+      <form className="login-form" onSubmit={handleSubmit}>
+        <input 
+          type="email" 
+          placeholder="Correo electrónico" 
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required 
+        />
+        <input 
+          type="password" 
+          placeholder="Contraseña"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required 
+        />
         <button type="submit" className="login-btn">Ingresar</button>
       </form>
 
@@ -47,6 +74,7 @@ function LoginPage({ onRegisterClick, onForgotClick }) {
           Regístrate
         </button>
       </p>
+    </div>
     </div>
   );
 }

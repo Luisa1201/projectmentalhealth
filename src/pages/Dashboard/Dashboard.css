@@ -15,10 +15,10 @@
 
 html, body, #root {
   height: 100%;
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   font-family: var(--font-family);
   background-color: var(--background-color);
   color: var(--text-color);
@@ -43,6 +43,7 @@ html, body, #root {
 
 /* ---------- DASHBOARD (dashboard.css) ---------- */
 .dashboard-container {
+  flex: 1 0 auto;
   min-height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
@@ -51,6 +52,7 @@ html, body, #root {
   padding-left: 20px;
   padding-right: 20px;
   margin-left: var(--sidebar-width);
+  
 }
 
 .dashboard-content {
@@ -64,27 +66,26 @@ html, body, #root {
 .indicadores, .graficos {
   width: 100%;
   box-sizing: border-box;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .indicadores {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
+  margin-top: 20px;
 }
 
 /* Cards */
 .card {
-  flex: 1 1 250px;
-  min-width: 220px;
-  max-width: 32%;
   background-color: var(--card-bg);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   padding: 20px;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card:hover {
@@ -100,12 +101,14 @@ html, body, #root {
   }
 }
 
+
+
 /* Gráficos */
 .grafico-linea img,
 .grafico-barras img,
 .grafico-circular img {
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   height: auto;
   display: block;
   border-radius: var(--border-radius);
@@ -128,4 +131,8 @@ html {
 .custom-header.sticky + .dashboard-container,
 .custom-header + .dashboard-container {
   padding-top: calc(var(--header-height) + 20px);
+}
+
+.footer {
+  flex-shrink: 0; /* Evita que el footer se comprima */
 }

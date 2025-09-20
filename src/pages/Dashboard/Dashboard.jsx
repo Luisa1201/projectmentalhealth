@@ -5,11 +5,12 @@ import Footer from "../ComponentFooter/Footer"
 import Header from "../ComponentHeader/Header"
 import Sidebar from "../ComponentSidebar/Sidebar"
 
-const Dashboard = () => {
+const Dashboard = ({onLogout}) => {
   return (
     <div className="dashboard-container">
         <Sidebar/>
-        <Header />
+        <Header onLogout={onLogout} />
+
 
       <h2 className="titulo">Resultados generales</h2>
 
@@ -64,7 +65,8 @@ const Dashboard = () => {
         <div className="grafico-circular">
         </div>
       </div>
-      <Footer />
+      
+       <Footer className="footer"/>
     </div>
   );
 };
