@@ -3,6 +3,7 @@ import "./RegisterForm.css";
 
 function RegisterForm({ onBackToLogin }) {
   return (
+    <div className="register-body">
     <div className="register-container">
       <h2>Registro</h2>
       <form className="register-form">
@@ -18,6 +19,7 @@ function RegisterForm({ onBackToLogin }) {
           Inicia sesión
         </button>
       </p>
+    </div>
     </div>
   );
 }

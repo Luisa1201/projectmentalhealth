@@ -3,6 +3,7 @@ import "./ForgotPassword.css";
 
 function ForgotPassword({ onBackToLogin }) {
   return (
+    <div className="forgot-body">
     <div className="forgot-container">
       <h2>Recuperar contraseña</h2>
       <p className="forgot-text">
@@ -18,6 +19,7 @@ function ForgotPassword({ onBackToLogin }) {
           Volver al inicio de sesión
         </button>
       </p>
+    </div>
     </div>
   );
 }
