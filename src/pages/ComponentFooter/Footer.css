@@ -1,0 +1,109 @@
+.footer {
+  background: #ffffff;
+  padding: 40px 20px 20px;
+  border-top: 4px solid #00b3b3;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -5px 25px rgba(0, 128, 128, 0.15);
+  animation: fadeIn 0.8s ease-in-out;
+  /* Asegura que el footer ocupe el ancho completo del viewport */
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  /* Elimina el max-width para que se extienda */
+  padding: 0 50px; /* Agrega padding lateral para que el contenido no toque los bordes */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+.footer-about {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-about h3 {
+  color: #006d6d;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-about p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-links h4 {
+  color: #006d6d;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #00a3a3;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #007777;
+  text-decoration: underline;
+}
+
+.footer-contact {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-contact h4 {
+  color: #006d6d;
+  margin-bottom: 15px;
+}
+
+.footer-contact p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.footer-socials a {
+  margin-right: 12px;
+  font-size: 22px;
+  color: #00a3a3;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #007777;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #444;
+}
+
+.footer-bottom hr {
+  border: none;
+  border-top: 1px solid #a0dcdc;
+  margin-bottom: 15px;
+}
